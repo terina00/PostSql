@@ -1,0 +1,15 @@
+//Create a table
+
+CREATE TABLE public.berries
+(
+    "berry_ID" integer NOT NULL,
+    "berry_Name" character,
+    berry_color character,
+    PRIMARY KEY ("berry_ID")
+);
+
+INSERT INTO public.berries(
+	"berry_ID", "berry_Name", berry_color)
+	VALUES (1, 'grapes', 'purple'),
+	(2, 'raspberries', 'maroon'),
+	(3, 'strawberries', 'red');
