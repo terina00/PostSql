@@ -1,0 +1,8 @@
+//table created using gui
+
+INSERT INTO public.fruit(
+	"FruitID", "FruitName")
+	VALUES (1, 'apple'), 
+	(2, 'peach'),
+	(3, 'strawberry');
+
