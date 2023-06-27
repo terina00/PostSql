@@ -1,1 +1,25 @@
 //Challenge 2
+
+CREATE TABLE human_resources.employees
+(
+    employee_id integer NOT NULL,
+    first_name character varying(50) NOT NULL,
+    last_name character varying(50) NOT NULL,
+    hire_date date,
+    department_id integer,
+    PRIMARY KEY (employee_id)
+);
+
+ALTER TABLE IF EXISTS human_resources.employees
+    OWNER to postgres;
+
+CREATE TABLE human_resources.departments
+(
+    department_id integer NOT NULL,
+    department_name character varying(30) NOT NULL,
+    building character varying(25),
+    PRIMARY KEY (department_id)
+);
+
+ALTER TABLE IF EXISTS human_resources.departments
+    OWNER to postgres;
