@@ -1,0 +1,33 @@
+//Organize tables with schemas
+
+
+CREATE SCHEMA manufacturing
+    AUTHORIZATION postgres;
+
+CREATE SCHEMA human_resources
+	AUTHORIZATION postgres;
+
+CREATE TABLE manufacturing.products
+(
+    product_id character varying(10) NOT NULL,
+    product_name character varying(100) NOT NULL,
+    power integer,
+    manufacturing_cost money NOT NULL,
+    company_id integer NOT NULL,
+    PRIMARY KEY (product_id)
+);
+
+ALTER TABLE IF EXISTS manufacturing.products
+    OWNER to postgres;
+
+CREATE TABLE manufacturing.categories
+(
+    category_id integer NOT NULL,
+    name character varying(50) NOT NULL,
+    market character varying(20) NOT NULL,
+    PRIMARY KEY (category_id)
+);
+
+ALTER TABLE IF EXISTS manufacturing.categories
+    OWNER to postgres;
+
