@@ -1,1 +1,16 @@
+SELECT product_name, manufacturing_cost, category_id
+FROM manufacturing.products
+WHERE category_id = 3;
+
+SELECT product_name, manufacturing_cost, category_id
+FROM manufacturing.products
+WHERE manufacturing_cost < '10';
+
+SELECT  products.product_id,
+	products.product_name,
+	categories.name AS category_name,
+	categories.market
+FROM manufacturing.products JOIN manufacturing.categories
+	ON products.category_id = categories.category_id
+Where market = 'industrial';
 
